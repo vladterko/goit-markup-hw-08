@@ -1,0 +1,77 @@
+.subscribe {
+    padding-top: 12px;
+
+    &__wrap {
+        display: flex;
+    }
+
+    &__input {
+        display: inline-block;
+        width: 358px;
+        height: 50px;
+        margin-right: 10px;
+        padding: 15px 16px;
+
+        color: var(--light-txt-clr);
+        background-color: transparent;
+
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        outline: transparent;
+    }
+
+    &__input::placeholder {
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    &__btn {
+        position: relative;
+    }
+
+    &__desc {
+        position: absolute;
+        top: 50%;
+        left: 28px;
+        transform: translateY(-50%);
+        transform-origin: center;
+
+        transition: left var(--animation-slow), transform var(--animation-slow);
+    }
+
+
+    &__input:focus-visible+.btn>&__desc,
+    &__input:not(:placeholder-shown)+.btn>&__desc {
+        left: calc(28px + 24px);
+
+        animation: puls 50ms ease-in 600ms;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 50%;
+        right: 28px;
+        transform: translateY(-50%);
+
+        transition: transform var(--animation-slow), opacity var(--animation-slow);
+    }
+
+    &__input:focus-visible+.btn>&__icon,
+    &__input:not(:placeholder-shown)+.btn>&__icon {
+        transform: translateX(50px) translateY(-45px) scale(0.3);
+
+        opacity: 0;
+    }
+
+    &__desc {
+        margin-right: 10px;
+
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.88;
+        letter-spacing: 0.06em;
+        color: var(--light-txt-clr);
+    }
+}

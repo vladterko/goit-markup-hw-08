@@ -1,0 +1,16 @@
+@keyframes puls {
+    0% {
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+    }
+
+    50% {
+        top: 50%;
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    100% {
+        top: 50%;
+        transform: translateY(-50%) scale(1);
+    }
+}

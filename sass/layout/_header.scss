@@ -1,0 +1,46 @@
+.header {
+    border-bottom: 1px solid #ECECEC;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        margin-right: 93px;
+    }
+}
+
+.contacts {
+    display: flex;
+    align-items: center;
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        color: var(--secondary-txt-clr);
+
+        transition: color var(--animation);
+    }
+
+    &__link:hover,
+    &__link:focus {
+        color: var(--accent-clr);
+    }
+
+    &__icon {
+        margin-right: 10px;
+        fill: currentColor;
+    }
+}

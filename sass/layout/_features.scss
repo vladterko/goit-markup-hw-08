@@ -1,0 +1,34 @@
+.features-section {
+    padding-bottom: 0;
+}
+
+.features-list {
+    display: flex;
+
+    &__item {
+        flex-basis: 270px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__wrapper {
+        display: flex;
+        width: 270px;
+        height: 120px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+
+        background-color: var(--sec-bg-clr);
+    }
+
+    &__desc {
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: 0.03em;
+        color: var(--secondary-txt-clr);
+    }
+}
+
