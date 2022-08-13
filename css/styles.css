@@ -329,11 +329,7 @@ img {
 
 /** =====  Features section  =====  
 ======================================== */
-/* .features-section {
-    padding-bottom: 0;
-}
-
-.features-list {
+/* .features-list {
     display: flex;
 }
 
@@ -374,7 +370,11 @@ img {
 
 /** =====  Work section  =====  
 ======================================== */
-/* .work-section__title {
+/* .work-section {
+    padding-top: 0;
+}
+
+.work-section__title {
     margin-bottom: 50px;
 }
 

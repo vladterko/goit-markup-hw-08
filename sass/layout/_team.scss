@@ -3,14 +3,11 @@
     margin-left: auto;
 
     background-color: var(--sec-bg-clr);
-
-    &__title {
-        margin-bottom: 50px;
-    }
 }
 
 .team-list {
-    --items: 4;
+
+    justify-content: center;
 
     &__item {
         flex-basis: 270px;

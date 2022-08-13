@@ -1,5 +1,14 @@
-.work-section__title {
-    margin-bottom: 50px;
+.work-section {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        display: block;
+        padding: 0 0 94px;
+    }
+
+    &__title {
+        margin-bottom: 50px;
+    }
 }
 
 .work-list__item {

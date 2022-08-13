@@ -2,6 +2,7 @@
 @import "./utils/variables";
 @import "./utils/visually-hidden";
 @import "./utils/animation";
+@import "./utils/grid-set";
 
 // base styles
 @import "./base/base";
@@ -9,7 +10,6 @@
 
 // components styles
 @import "./components/buttons";
-@import "./components/grid-set";
 @import "./components/section";
 @import "./components/container";
 @import "./components/titles";
@@ -19,6 +19,7 @@
 // layout styles
 @import "./layout/header";
 @import "./layout/nav";
+@import "./layout/_menu";
 @import "./layout/hero";
 @import "./layout/features";
 @import "./layout/works";

@@ -21,6 +21,12 @@
     }
 
     &__btn {
-        min-width: 216px;
+        width: 200px;
+        
+
+        @media screen and (min-width: 1200px) {
+           width: 216px; 
+        }
+        
     }
 }

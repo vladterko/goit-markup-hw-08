@@ -1,21 +1,39 @@
 .section-title {
-    font-size: 36px;
-    line-height: 1.17;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+    line-height: 1.18;
     letter-spacing: 0.03em;
     text-align: center;
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+
+        font-size: 36px;
+        line-height: 1.17;
+    }
 }
 
 .hero-section__title {
-    width: 696px;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
     letter-spacing: 0.06em;
+    text-align: center;
     text-transform: uppercase;
     color: var(--light-txt-clr);
-    text-align: center;
+
+    width: 360px;
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+
+        width: 696px;
+    }
+    
 }
 
 .features-list__title {
@@ -25,6 +43,10 @@
     line-height: 1.14;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 }
 
 .team-list__title {
@@ -45,6 +67,11 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--light-txt-clr);
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        text-align: left;
+    }
 }
 
 .request__title {
@@ -53,8 +80,14 @@
 
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     letter-spacing: 0.03em;
+    text-align: center;
+    color: var(--main-txt-clr);
+    
+    @media screen and (min-width: 1200px) {
+       line-height: 1.15; 
+    }
 }
 
 .project-wrapper__title {

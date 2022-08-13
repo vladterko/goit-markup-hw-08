@@ -7,17 +7,53 @@
     background-color: var(--dark-bg-clr);
 
     &__container {
-        display: flex;
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
     }
 
     &__addr-wrap {
-        flex-basis: 231px;
-        margin-right: 70px;
+        margin-bottom: 60px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            margin-right: 165px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: 231px;
+            margin-right: 70px;
+            margin-bottom: 0px;
+
+            text-align: left;
+        }
     }
 
     &__join-wrap {
-        margin-right: 93px;
-        padding-top: 12px;
+        margin-bottom: 24px;
+
+        text-align: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            padding-top: 5px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            margin-top: 0px;
+            margin-right: 93px;
+            margin-bottom: 0px;
+            padding-top: 12px;
+
+            text-align: left;
+        }
     }
 
     &__logo {
@@ -31,16 +67,24 @@
 
     &__post {
         display: block;
-        margin-bottom: 9px;
+        margin-bottom: 8px;
 
         font-size: 14px;
         line-height: 1.71;
         letter-spacing: 0.03em;
         color: var(--light-txt-clr);
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 9px;
+        }
     }
 
     &__item:not(:last-child) {
-        margin-bottom: 9px;
+        margin-bottom: 8px;
+
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 9px;
+        }
     }
 
     &__link {

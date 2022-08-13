@@ -1,21 +1,19 @@
-.features-section {
-    padding-bottom: 0;
-}
-
 .features-list {
-    display: flex;
 
     &__item {
-        flex-basis: 270px;
-    }
+        flex-basis: 450px;
 
-    &__item:not(:last-child) {
-        margin-right: 30px;
+        @media screen and (min-width: 768px) {
+            flex-basis: 354px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            flex-basis: 270px;
+        }
     }
 
     &__wrapper {
         display: flex;
-        width: 270px;
         height: 120px;
         justify-content: center;
         align-items: center;

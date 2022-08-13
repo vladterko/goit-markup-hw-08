@@ -1,7 +1,16 @@
 .radio-list {
     display: flex;
-    margin-bottom: 50px;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 
     &__item:not(:last-child) {
         margin-right: 8px;
@@ -9,7 +18,15 @@
 }
 
 .project-list__item {
-    flex-basis: 370px;
+    flex-basis: 450px;
+
+    @media screen and (min-width: 768px) {
+        flex-basis: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        flex-basis: 370px;
+    }
 }
 
 .project-list__link {
