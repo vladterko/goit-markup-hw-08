@@ -571,6 +571,13 @@ img {
   top: 0;
   right: 0;
   padding: 48px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
   min-height: 796px;
   background-color: var(--main-bg-clr);
@@ -629,7 +636,7 @@ img {
 }
 
 .nav-menu {
-  margin-bottom: 302px;
+  margin-bottom: auto;
 }
 .nav-menu_item:not(:last-child) {
   margin-bottom: 32px;

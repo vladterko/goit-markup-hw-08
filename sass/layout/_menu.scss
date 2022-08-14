@@ -3,6 +3,10 @@
     top: 0;
     right: 0;
     padding: 48px 40px;
+
+    display: flex;
+    flex-direction: column;
+
     width: 100%;
     min-height: 796px;
     background-color: var(--main-bg-clr);
@@ -57,7 +61,8 @@
 }
 
 .nav-menu {
-    margin-bottom: 302px;
+    // margin-bottom: 302px;
+    margin-bottom: auto;
 
     &_item:not(:last-child) {
         margin-bottom: 32px;
