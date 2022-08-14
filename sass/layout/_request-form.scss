@@ -34,7 +34,7 @@
 
         transition: border-color var(--animation);
 
-        @media screen and (min-width: 480px) and (max-width: 1200px) {
+        @media screen and (min-width: 480px) and (max-width: 1199px) {
             width: 370px;
         }
 
@@ -84,7 +84,7 @@
         height: 120px;
         resize: none;
 
-        @media screen and (min-width: 480px) and (max-width: 1200px) {
+        @media screen and (min-width: 480px) and (max-width: 1199px) {
             width: 370px;
         }
     

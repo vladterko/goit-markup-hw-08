@@ -35,7 +35,15 @@
     opacity: 1;
     transition: transform var(--animation), opacity var(--animation);
 
-    @media screen and (min-width: 480px) and (max-width: 1200px) {
+    @media screen and (max-width: 400px) {
+        width: 310px;
+    }
+    
+    @media screen and (min-width: 400px) {
+        width: 370px;
+    }
+
+    @media screen and (min-width: 480px) and (max-width: 1199px) {
         width: 450px;
     }
 

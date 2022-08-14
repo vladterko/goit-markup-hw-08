@@ -57,7 +57,7 @@
             >
           </li>
         </ul>
-        <button type="button" class="header__menu-button" href="">
+        <button type="button" class="header__menu-button" data-menu-open>
           <svg class="header__menu-icon" width="40" height="40">
             <use href="./images/icons.svg#menu-open"></use>
           </svg>
@@ -65,7 +65,7 @@
       </div>
 
       <!-- Menu -->
-      <div class="menu">
+      <div class="menu" data-menu>
         <h2 class="visually-hidden">Навігаційне меню</h2>
         <div class="nav-menu">
           <ul class="nav-menu_list list">
@@ -135,7 +135,7 @@
           </ul>
         </div>
 
-        <button type="button" class="menu__close-btn">
+        <button type="button" class="menu__close-btn" data-menu-close>
           <svg class="menu__close-icon" width="40" height="40">
             <use href="./images/icons.svg#menu-close"></use>
           </svg>
@@ -213,37 +213,85 @@
           <h2 class="work-section__title section-title">Чим ми займаємося</h2>
           <ul class="work-list list grid-set">
             <li class="work-list__item grid-item">
-              <img
-                class="work-list__img"
-                src="./images/devices/comp.jpg"
-                alt="Співробітник працює з комп’ютером"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/devices/comp@1x_lg.webp 1x, ./images/devices/comp@2x_lg.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/devices/comp@1x_lg.jpg 1x, ./images/devices/comp@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="work-list__img"
+                  src="./images/devices/comp@1x_lg.jpg"
+                  alt="Співробітник працює з комп’ютером"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <div class="work-list__overlay">
                 <p class="work-list__overlay-text">Десктопні додатки</p>
               </div>
             </li>
             <li class="work-list__item grid-item">
-              <img
-                class="work-list__img"
-                src="./images/devices/phone.jpg"
-                alt="Співробітник працює з телефоном"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/devices/phone@1x_lg.webp 1x,
+                    ./images/devices/phone@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/devices/phone@1x_lg.jpg 1x, ./images/devices/phone@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+                <img
+                  class="work-list__img"
+                  src="./images/devices/phone@1x_lg.jpg"
+                  alt="Співробітник працює з телефоном"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <div class="work-list__overlay">
                 <p class="work-list__overlay-text">Мобільні додатки</p>
               </div>
             </li>
             <li class="work-list__item grid-item">
-              <img
-                class="work-list__img"
-                src="./images/devices/tablet.jpg"
-                alt="Співробітник працює з планшетом"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/devices/tablet@1x_lg.webp 1x,
+                    ./images/devices/tablet@2x_lg.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/devices/tablet@1x_lg.jpg 1x,
+                    ./images/devices/tablet@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="work-list__img"
+                  src="./images/devices/tablet@1x_lg.jpg"
+                  alt="Співробітник працює з планшетом"
+                  width="370"
+                  height="294"
+                />
+              </picture>
+
               <div class="work-list__overlay">
                 <p class="work-list__overlay-text">Дизайнерські рішення</p>
               </div>
@@ -258,13 +306,50 @@
           <h2 class="team-section__title section-title">Наша команда</h2>
           <ul class="team-list list grid-set">
             <li class="team-list__item grid-item">
-              <img
-                class="team-list__img"
-                src="./images/team/igor.jpg"
-                alt="Дизайнер продукту Ігорь Дем’яненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- desctop -->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/igor@1x_lg.webp 1x, ./images/team/igor@2x_lg.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/igor@1x_lg.jpg 1x, ./images/team/igor@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- tablet -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/igor@1x_md.webp 1x, ./images/team/igor@2x_md.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/igor@1x_md.jpg 1x, ./images/team/igor@2x_md.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- mobile -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/igor@1x_sm.webp 1x, ./images/team/igor@2x_sm.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/igor@1x_sm.jpg 1x, ./images/team/igor@2x_sm.jpg 2x"
+                  type="image/jpg"
+                />
+                <!-- fallback -->
+                <img
+                  class="team-list__img"
+                  src="./images/team/igor@1x_sm.jpg"
+                  alt="Дизайнер продукту Ігорь Дем’яненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__title">Ігорь Дем’яненко</h3>
                 <p class="team-list__desc" lang="en">Product Designer</p>
@@ -325,13 +410,49 @@
               </ul>
             </li>
             <li class="team-list__item grid-item">
-              <img
-                class="team-list__img"
-                src="./images/team/olga.jpg"
-                alt="Фронтенд-розробник Ольга Репіна"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/olga@1x_lg.webp 1x, ./images/team/olga@2x_lg.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/olga@1x_lg.jpg 1x, ./images/team/olga@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/olga@1x_md.webp 1x, ./images/team/olga@2x_md.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/olga@1x_md.jpg 1x, ./images/team/olga@2x_md.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/olga@1x_sm.webp 1x, ./images/team/olga@2x_sm.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/olga@1x_sm.jpg 1x, ./images/team/olga@2x_sm.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team-list__img"
+                  src="./images/team/olga@1x_sm.jpg"
+                  alt="Фронтенд-розробник Ольга Репіна"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__title">Ольга Репіна</h3>
                 <p class="team-list__desc" lang="en">Frontend Developer</p>
@@ -392,13 +513,49 @@
               </ul>
             </li>
             <li class="team-list__item grid-item">
-              <img
-                class="team-list__img"
-                src="./images/team/nikolay.jpg"
-                alt="Маркетолог Микола Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/nikolay@1x_lg.webp 1x, ./images/team/nikolay@2x_lg.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/nikolay@1x_lg.jpg 1x, ./images/team/nikolay@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/nikolay@1x_md.webp 1x, ./images/team/nikolay@2x_md.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/nikolay@1x_md.jpg 1x, ./images/team/nikolay@2x_md.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/nikolay@1x_sm.webp 1x, ./images/team/nikolay@2x_sm.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/nikolay@1x_sm.jpg 1x, ./images/team/nikolay@2x_sm.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team-list__img"
+                  src="./images/team/nikolay@1x_sm.jpg"
+                  alt="Маркетолог Микола Тарасов"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__title">Микола Тарасов</h3>
                 <p class="team-list__desc" lang="en">Marketing</p>
@@ -459,13 +616,49 @@
               </ul>
             </li>
             <li class="team-list__item grid-item">
-              <img
-                class="team-list__img"
-                src="./images/team/michael.jpg"
-                alt="Дизайнер інтерфейсу Михайло Єрмаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/michael@1x_lg.webp 1x, ./images/team/michael@2x_lg.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/team/michael@1x_lg.jpg 1x, ./images/team/michael@2x_lg.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/michael@1x_md.webp 1x, ./images/team/michael@2x_md.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/team/michael@1x_md.jpg 1x, ./images/team/michael@2x_md.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/michael@1x_sm.webp 1x, ./images/team/michael@2x_sm.webp 2x"
+                  type="image/webp"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="./images/team/michael@1x_sm.jpg 1x, ./images/team/michael@2x_sm.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img
+                  class="team-list__img"
+                  src="./images/team/michael@1x_sm.jpg"
+                  alt="Дизайнер інтерфейсу Михайло Єрмаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="team-list__wrapper">
                 <h3 class="team-list__title">Михайло Єрмаков</h3>
                 <p class="team-list__desc" lang="en">UI Designer</p>
@@ -826,5 +1019,6 @@
 
     <!-- Script -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

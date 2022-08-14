@@ -22,8 +22,8 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header container">
-      <div class="header__container">
+    <header class="header">
+      <div class="header__container container">
         <a class="logo header__logo link" href="./index.html" lang="en"
           >Web<span class="logo logo--dark-color">Studio</span></a
         >
@@ -41,7 +41,7 @@
           </ul>
         </nav>
 
-        <ul class="contacts header__contacts list">
+        <ul class="contacts list">
           <li class="contacts__item">
             <a class="contacts__link link" href="mailto:info@devstudio.com">
               <svg class="contacts__icon" width="16" height="12">
@@ -59,11 +59,89 @@
             >
           </li>
         </ul>
-        <a class="header__menu-link link" href="">
+        <button type="button" class="header__menu-button" data-menu-open>
           <svg class="header__menu-icon" width="40" height="40">
-            <use href="./images/icons.svg#menu"></use>
+            <use href="./images/icons.svg#menu-open"></use>
           </svg>
-        </a>
+        </button>
+      </div>
+
+      <!-- Menu -->
+      <div class="menu" data-menu>
+        <h2 class="visually-hidden">Навігаційне меню</h2>
+        <div class="nav-menu">
+          <ul class="nav-menu_list list">
+            <li class="nav-menu_item">
+              <a href="./index.html" class="nav-menu_link link">Студія</a>
+            </li>
+            <li class="nav-menu_item">
+              <a href="./portfolio.html" class="nav-menu_link link nav-menu_link--current-page"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="nav-menu_item"><a href="" class="nav-menu_link link">Контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="menu-contacts">
+          <ul class="menu-contacts__list list">
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__link link" href="tel:+380961111111"> +38 096 111 11 11</a>
+            </li>
+            <li class="menu-contacts__item">
+              <a class="menu-contacts__link link" href="mailto:info@devstudio.com">
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="menu-socials">
+          <ul class="menu-socials__list list">
+            <li class="menu-socials__item">
+              <a
+                class="menu-socials__link link"
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram
+              </a>
+            </li>
+            <li class="menu-socials__item">
+              <a
+                class="menu-socials__link link"
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Twitter
+              </a>
+            </li>
+            <li class="menu-socials__item">
+              <a
+                class="menu-socials__link link"
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Facebook
+              </a>
+            </li>
+            <li class="menu-socials__item">
+              <a
+                class="menu-socials__link link"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <button type="button" class="menu__close-btn" data-menu-close>
+          <svg class="menu__close-icon" width="40" height="40">
+            <use href="./images/icons.svg#menu-close"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -93,13 +171,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/tech-site.jpg"
-                    alt="Ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_lg.webp 1x,
+                        ./images/projects/tech-site@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_lg.jpg 1x,
+                        ./images/projects/tech-site@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_md.webp 1x,
+                        ./images/projects/tech-site@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_md.jpg 1x,
+                        ./images/projects/tech-site@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_sm.webp 1x,
+                        ./images/projects/tech-site@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/tech-site@1x_sm.jpg 1x,
+                        ./images/projects/tech-site@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/tech-site@1x_sm.jpg"
+                      alt="Ноутбук"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -117,13 +249,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/new-orlean.jpg"
-                    alt="Двоє спортсменів грають у баскетбол"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_lg.webp 1x,
+                        ./images/projects/new-orlean@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_lg.jpg 1x,
+                        ./images/projects/new-orlean@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_md.webp 1x,
+                        ./images/projects/new-orlean@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_md.jpg 1x,
+                        ./images/projects/new-orlean@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_sm.webp 1x,
+                        ./images/projects/new-orlean@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/new-orlean@1x_sm.jpg 1x,
+                        ./images/projects/new-orlean@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/new-orlean@1x_sm.jpg"
+                      alt="Двоє спортсменів грають у баскетбол"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -143,13 +329,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/seafood.jpg"
-                    alt="Логотип ресторану Seafood"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/seafood@1x_lg.webp 1x,
+                        ./images/projects/seafood@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/seafood@1x_lg.jpg 1x,
+                        ./images/projects/seafood@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/seafood@1x_md.webp 1x,
+                        ./images/projects/seafood@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/seafood@1x_md.jpg 1x,
+                        ./images/projects/seafood@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/seafood@1x_sm.webp 1x,
+                        ./images/projects/seafood@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/seafood@1x_sm.jpg 1x,
+                        ./images/projects/seafood@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/seafood@1x_sm.jpg"
+                      alt="Логотип ресторану Seafood"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -167,13 +407,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/prime-project.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_lg.webp 1x,
+                        ./images/projects/prime-project@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_lg.jpg 1x,
+                        ./images/projects/prime-project@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_md.webp 1x,
+                        ./images/projects/prime-project@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_md.jpg 1x,
+                        ./images/projects/prime-project@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_sm.webp 1x,
+                        ./images/projects/prime-project@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/prime-project@1x_sm.jpg 1x,
+                        ./images/projects/prime-project@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/prime-project@1x_sm.jpg"
+                      alt="Наушники"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -191,13 +485,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/boxes-project.jpg"
-                    alt="Дві картонні коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_lg.webp 1x,
+                        ./images/projects/boxes-project@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_lg.jpg 1x,
+                        ./images/projects/boxes-project@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_md.webp 1x,
+                        ./images/projects/boxes-project@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_md.jpg 1x,
+                        ./images/projects/boxes-project@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_sm.webp 1x,
+                        ./images/projects/boxes-project@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/boxes-project@1x_sm.jpg 1x,
+                        ./images/projects/boxes-project@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/boxes-project@1x_sm.jpg"
+                      alt="Дві картонні коробки"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -215,13 +563,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/inspiration-site.jpg"
-                    alt="Вебсайт відкритий на моніторі"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_lg.webp 1x,
+                        ./images/projects/inspiration-site@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_lg.jpg 1x,
+                        ./images/projects/inspiration-site@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_md.webp 1x,
+                        ./images/projects/inspiration-site@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_md.jpg 1x,
+                        ./images/projects/inspiration-site@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_sm.webp 1x,
+                        ./images/projects/inspiration-site@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/inspiration-site@1x_sm.jpg 1x,
+                        ./images/projects/inspiration-site@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/inspiration-site@1x_sm.jpg"
+                      alt="Вебсайт відкритий на моніторі"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -241,13 +643,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/limited-edition.jpg"
-                    alt="Сторінки журналу"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_lg.webp 1x,
+                        ./images/projects/limited-edition@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_lg.jpg 1x,
+                        ./images/projects/limited-edition@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_md.webp 1x,
+                        ./images/projects/limited-edition@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_md.jpg 1x,
+                        ./images/projects/limited-edition@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_sm.webp 1x,
+                        ./images/projects/limited-edition@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/limited-edition@1x_sm.jpg 1x,
+                        ./images/projects/limited-edition@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/limited-edition@1x_sm.jpg"
+                      alt="Сторінки журналу"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -267,13 +723,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/lab-project.jpg"
-                    alt="Брендова картка"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_lg.webp 1x,
+                        ./images/projects/lab-project@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_lg.jpg 1x,
+                        ./images/projects/lab-project@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_md.webp 1x,
+                        ./images/projects/lab-project@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_md.jpg 1x,
+                        ./images/projects/lab-project@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_sm.webp 1x,
+                        ./images/projects/lab-project@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/lab-project@1x_sm.jpg 1x,
+                        ./images/projects/lab-project@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/lab-project@1x_sm.jpg"
+                      alt="Брендова картка"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -291,13 +801,67 @@
             <li class="project-list__item">
               <a class="project-list__link link" href="">
                 <div class="project-thumb">
-                  <img
-                    class="project-thumb__img"
-                    src="./images/projects/growing-business.jpg"
-                    alt="Чоловік працює за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_lg.webp 1x,
+                        ./images/projects/growing-business@2x_lg.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_lg.jpg 1x,
+                        ./images/projects/growing-business@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_md.webp 1x,
+                        ./images/projects/growing-business@2x_md.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_md.jpg 1x,
+                        ./images/projects/growing-business@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_sm.webp 1x,
+                        ./images/projects/growing-business@2x_sm.webp 2x
+                      "
+                      type="image/webp"
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/projects/growing-business@1x_sm.jpg 1x,
+                        ./images/projects/growing-business@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <img
+                      class="team-list__img"
+                      src="./images/projects/growing-business@1x_sm.jpg"
+                      alt="Чоловік працює за ноутбуком"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
+
                   <div class="project-thumb__overlay">
                     <p class="project-thumb__overlay-txt">
                       Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -426,5 +990,7 @@
         </div>
       </footer>
     </main>
+    <!-- Script -->
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
