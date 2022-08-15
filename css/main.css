@@ -594,7 +594,7 @@ img {
 }
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .menu {
-    width: 480px;
+    width: 100vw;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1418,9 +1418,10 @@ img {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 8px;
   margin-bottom: 40px;
 }
 @media screen and (min-width: 768px) {
@@ -1432,9 +1433,6 @@ img {
   .radio-list {
     margin-bottom: 50px;
   }
-}
-.radio-list__item:not(:last-child) {
-  margin-right: 8px;
 }
 
 .project-list__item {
