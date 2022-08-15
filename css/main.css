@@ -1427,6 +1427,9 @@ img {
 @media screen and (min-width: 768px) {
   .radio-list {
     margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 @media screen and (min-width: 1200px) {
